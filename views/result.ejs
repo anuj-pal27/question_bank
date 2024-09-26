@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overall Results</title>
+</head>
+<body>
+    <h1>
+        YOUR OVERALL PERFORMANCE
+    </h1>
+   <% for(result of results){ %>
+    <h3>Total Marks:<%=result.totalMarks %></h3>
+        <h3>Score Marks:<%=result.scoreMarks %></h3>
+        <h3>Time <%=result.submitAt.toString().split(" ")[4]%></h3>
+        <h3>Date <%=result.submitAt.toString().split(" ").slice(0,4).join(" ")  %></h3>
+    <%} %>
+</body>
+</html>

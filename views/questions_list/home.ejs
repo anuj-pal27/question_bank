@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <h2>List of Questions</h2>
+    <div>
+        <form action="/test/result" method="post">
+            <%for(test of newtests){
+                %>
+                <h3>Question:<%=test.question %></h3>
+                    <label>
+                        <input type="radio" name="<%=test._id%>" value="a">
+                        <%=test.options[0].a %>
+                    </label><br>
+                    <label>
+                        <input type="radio" name="<%=test._id %>" value="b">
+                        <%=test.options[0].b %>
+                    </label><br>
+                    <label>
+                        <input type="radio" name="<%=test._id %>" value="c">
+                    <%=test.options[0].c %>
+                    </label><br>
+                    <label >
+                        <input type="radio" name="<%=test._id %>" value="d">
+                        <%=test.options[0].d %>
+                    </label><br>
+    
+                <%}%><br>
+            <div>
+                <button>submit</button>
+            </div>
+            </form>
+    </div>
+</body>
+</html>
